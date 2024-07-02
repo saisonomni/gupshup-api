@@ -2,9 +2,9 @@ package com.saison.omni.common.gupshup.util;
 
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import com.saison.omni.gupshup_api.config.GupshupApiConfig;
-import com.saison.omni.gupshup_api.constants.QueryParamConstants;
-import com.saison.omni.gupshup_api.rename.SendOTPDto;
+import com.saison.omni.common.gupshup.config.GupshupApiConfig;
+import com.saison.omni.common.gupshup.constants.QueryParamConstants;
+import com.saison.omni.common.gupshup.dto.SendOTPDto;
 import com.saison.omni.common.gupshup.dto.VerifyOTPDto;
 import com.saison.omni.common.gupshup.response.SendOTPResponse;
 import com.saison.omni.common.gupshup.response.VerifyOTPResponse;

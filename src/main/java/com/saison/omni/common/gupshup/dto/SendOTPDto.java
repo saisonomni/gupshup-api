@@ -1,6 +1,4 @@
-package com.saison.omni.common.gupshup.dto
-
--common.dto;
+package com.saison.omni.common.gupshup.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

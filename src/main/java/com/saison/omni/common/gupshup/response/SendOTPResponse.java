@@ -1,4 +1,4 @@
-package com.saison.omni.gupshup_api.response;
+package com.saison.omni.common.gupshup.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

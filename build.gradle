@@ -1,20 +1,45 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.3.1'
-	id 'io.spring.dependency-management' version '1.1.5'
+	id 'org.springframework.boot' version '2.7.7'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	// Plugin for generating k8s resources and helm chart create/publish
+	// https://www.eclipse.org/jkube/docs/kubernetes-gradle-plugin/
+	id 'maven-publish'
 }
 
 group = 'com.saison.omni'
-version = '0.0.1-SNAPSHOT'
-
-java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
-	}
-}
+version = '0.0.1'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
+	maven {
+		url "$artifactoryUrl"
+		credentials {
+			username "aws"
+			password "$codeartifactToken"
+		}
+	}
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			groupId = group
+			artifactId = 'gupshup-api'
+			version = version
+			from components.java
+		}
+	}
+	repositories {
+		maven {
+			url "$artifactoryUrl"
+			credentials {
+				username "aws"
+				password "$codeartifactToken"
+			}
+		}
+	}
 }
 
 dependencies {
@@ -34,4 +59,16 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+sourceSets {
+	main {
+		java {
+			java.srcDir("$buildDir/generated/src/main/java")
+		}
+	}
+}
+
+bootJar {
+	exclude('application.yaml')
+	exclude('application.properties')
 }

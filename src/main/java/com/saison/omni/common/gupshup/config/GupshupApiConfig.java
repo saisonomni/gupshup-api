@@ -1,4 +1,4 @@
-package com.saison.omni.gupshup_api.config;
+package com.saison.omni.common.gupshup.config;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.saison.omni.gupshup_api.constants;
+package com.saison.omni.common.gupshup.constants-common.constants;
 
 public class QueryParamConstants {
     public static String userid = "userid";

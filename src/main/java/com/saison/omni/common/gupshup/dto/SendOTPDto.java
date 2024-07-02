@@ -1,4 +1,6 @@
-package com.saison.omni.gupshup_api.rename;
+package com.saison.omni.common.gupshup.dto
+
+-common.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class VerifyOTPDto {
+public class SendOTPDto {
     String phoneNumber;
-    String otpCpde;
+    String msg;
 }

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class VerifyOTPDto {
-    String phoneNumber;
-    String otpCode;
+    public String phoneNumber;
+    public String otpCode;
 
 }

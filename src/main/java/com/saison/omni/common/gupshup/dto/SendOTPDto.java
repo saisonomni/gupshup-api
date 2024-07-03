@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SendOTPDto {
-    String phoneNumber;
-    String msg;
+    public String phoneNumber;
+    public String msg;
 }

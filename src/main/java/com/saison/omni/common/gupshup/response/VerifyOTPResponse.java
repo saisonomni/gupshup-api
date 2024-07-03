@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class VerifyOTPResponse {
-    private boolean isSuccess;
-    private String errorCode;
-    private String errorMessage;
+    public boolean isSuccess;
+    public String errorCode;
+    public String errorMessage;
 }

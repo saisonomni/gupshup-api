@@ -11,5 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class VerifyOTPDto {
     String phoneNumber;
-    String otpCpde;
+    String otpCode;
+
 }

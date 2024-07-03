@@ -13,11 +13,11 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 
-public class ApiCalls {
+public class GupShupApiCalls {
     GupshupApiConfig gupshupApiConfig;
-    Logger logger = LoggerFactory.getLogger(ApiCalls.class);
+    Logger logger = LoggerFactory.getLogger(GupShupApiCalls.class);
     String timeStamp ;
-    public ApiCalls(GupshupApiConfig gupshupApiConfig){
+    public GupShupApiCalls(GupshupApiConfig gupshupApiConfig){
         this.gupshupApiConfig = gupshupApiConfig;
     }
     public SendOTPResponse sendOtp(SendOTPDto sendOTPDto) throws UnirestException {

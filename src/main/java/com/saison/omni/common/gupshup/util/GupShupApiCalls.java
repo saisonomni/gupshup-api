@@ -72,7 +72,7 @@ public class GupShupApiCalls {
                 .queryString(QueryParamConstants.method,gupshupApiConfig.getMethod())
                 .queryString(QueryParamConstants.v,gupshupApiConfig.getVersion())
                 .queryString(QueryParamConstants.phone_no,verifyOTPDto.getPhoneNumber())
-                .queryString(QueryParamConstants.otpCode,verifyOTPDto.getOtpCpde())
+                .queryString(QueryParamConstants.otpCode,verifyOTPDto.getOtpCode())
                 .asObject(String.class)
                 .getBody();
         long timeAfterApiCall = System.currentTimeMillis();

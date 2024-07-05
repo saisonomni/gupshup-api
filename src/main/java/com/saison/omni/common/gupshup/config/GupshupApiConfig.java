@@ -14,5 +14,6 @@ public class GupshupApiConfig {
     String format;
     String otpCodeLength;
     String otpCodeType;
+    String dltTemplateId;
 
 }

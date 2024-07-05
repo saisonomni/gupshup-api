@@ -10,5 +10,6 @@ public class QueryParamConstants {
     public static String format = "format";
     public static String otpCodeLength = "otpCodeLength";
     public static String otpCodeType = "otpCodeType";
+    public static String dltTemplateId = "dltTemplateId";
     public static String otpCode = "otp_code";
 }

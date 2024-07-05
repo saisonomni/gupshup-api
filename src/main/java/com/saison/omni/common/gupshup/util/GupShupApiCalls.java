@@ -35,6 +35,7 @@ public class GupShupApiCalls {
                 .queryString(QueryParamConstants.format,gupshupApiConfig.getFormat())
                 .queryString(QueryParamConstants.otpCodeLength,gupshupApiConfig.getOtpCodeLength())
                 .queryString(QueryParamConstants.otpCodeType,gupshupApiConfig.getOtpCodeType())
+                .queryString(QueryParamConstants.dltTemplateId,gupshupApiConfig.getDltTemplateId())
                 .asObject(String.class)
                 .getBody();
         long timeAfterApiCall = System.currentTimeMillis();
@@ -45,12 +46,12 @@ public class GupShupApiCalls {
         }
         if(parts.length>0){
             if(parts[0].compareToIgnoreCase("success")==0){
-                SendOTPResponse.builder()
+                return SendOTPResponse.builder()
                         .isSuccess(true)
                         .build();
             }
             else{
-                SendOTPResponse.builder()
+                return SendOTPResponse.builder()
                         .errorCode(parts[1])
                         .errorMessage(parts[2])
                         .build();
@@ -83,12 +84,12 @@ public class GupShupApiCalls {
         }
         if(parts.length>0){
             if(parts[0].compareToIgnoreCase("success")==0){
-                VerifyOTPResponse.builder()
+                return VerifyOTPResponse.builder()
                         .isSuccess(true)
                         .build();
             }
             else{
-                VerifyOTPResponse.builder()
+                return VerifyOTPResponse.builder()
                         .errorCode(parts[1])
                         .errorMessage(parts[2])
                         .build();

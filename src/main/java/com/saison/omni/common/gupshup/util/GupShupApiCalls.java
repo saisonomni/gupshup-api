@@ -1,13 +1,13 @@
 package com.saison.omni.common.gupshup.util;
 
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
+import kong.unirest.Unirest;
 import com.saison.omni.common.gupshup.config.GupshupApiConfig;
 import com.saison.omni.common.gupshup.constants.QueryParamConstants;
 import com.saison.omni.common.gupshup.dto.SendOTPDto;
 import com.saison.omni.common.gupshup.dto.VerifyOTPDto;
 import com.saison.omni.common.gupshup.response.SendOTPResponse;
 import com.saison.omni.common.gupshup.response.VerifyOTPResponse;
+import kong.unirest.UnirestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

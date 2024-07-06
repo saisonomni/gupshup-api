@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.saison.omni'
-version = '0.0.7'
+version = '0.0.8'
 sourceCompatibility = '11'
 
 repositories {
@@ -43,18 +43,11 @@ publishing {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.projectlombok:lombok:1.18.22'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	implementation 'com.mashape.unirest:unirest-java:1.4.9'
-	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
-	// https://mvnrepository.com/artifact/commons-codec/commons-codec
-	implementation group: 'commons-codec', name: 'commons-codec', version: '1.5'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.slf4j:slf4j-api:2.0.9'
+	implementation 'com.konghq:unirest-java:3.11.09'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
 }
 
 tasks.named('test') {

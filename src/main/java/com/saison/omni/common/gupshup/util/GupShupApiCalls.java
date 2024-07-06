@@ -24,6 +24,7 @@ public class GupShupApiCalls {
         timeStamp = String.valueOf(new Date().getTime());
         String url = gupshupApiConfig.getBaseUrl();
         logger.info("inside sendOtp method with data : {}",sendOTPDto);
+        logger.info("gupshupApiConfig : {}",gupshupApiConfig.toString());
         long timeBeforeApiCall = System.currentTimeMillis();
         String response = Unirest.get(url)
                 .queryString(QueryParamConstants.userid,gupshupApiConfig.getUserId())

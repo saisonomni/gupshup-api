@@ -37,7 +37,7 @@ public class GupShupApiCalls {
                 .queryString(QueryParamConstants.otpCodeLength,gupshupApiConfig.getOtpCodeLength())
                 .queryString(QueryParamConstants.otpCodeType,gupshupApiConfig.getOtpCodeType())
                 .queryString(QueryParamConstants.dltTemplateId,gupshupApiConfig.getDltTemplateId())
-                .asObject(String.class)
+                .asString()
                 .getBody();
         long timeAfterApiCall = System.currentTimeMillis();
         logger.info("response : {} , timeforAPI : {} ms",response,timeAfterApiCall-timeBeforeApiCall);
